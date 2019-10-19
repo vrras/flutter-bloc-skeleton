@@ -1,3 +1,4 @@
+import 'package:bloc_pattern_mark1/src/ui/movie-list.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -8,7 +9,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData.dark(),
       home: Scaffold(
-        body: Container(),
+        body: MovieList(),
       ),
     );
   }
