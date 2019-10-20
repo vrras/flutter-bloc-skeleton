@@ -1,16 +1,8 @@
-import 'package:bloc_pattern_mark1/src/ui/movie-list.dart';
+import 'package:bloc_pattern_mark1/src/di/bloc-injector.dart';
+import 'package:bloc_pattern_mark1/src/di/bloc-module.dart';
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData.dark(),
-      home: Scaffold(
-        body: MovieList(),
-      ),
-    );
-  }
+void main() async {
+  var container = await BlocInjector.create(BlocModule());
+  runApp(container.app);
 }
