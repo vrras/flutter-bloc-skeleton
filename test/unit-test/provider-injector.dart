@@ -1,7 +1,7 @@
 import 'package:inject/inject.dart';
 import 'provider-injector.inject.dart' as g;
-import 'provider-module.dart';
 import 'provider-test.dart';
+import 'provider-module.dart';
 
 @Injector(const [ProviderModule])
 abstract class ProviderTestInjector{

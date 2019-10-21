@@ -1,4 +1,5 @@
 import 'package:bloc_pattern_mark1/src/models/movies-popular.dart';
+import 'package:bloc_pattern_mark1/src/models/state.dart';
 import 'package:bloc_pattern_mark1/src/models/trailer.dart';
 import 'package:bloc_pattern_mark1/src/resources/network.provider.dart';
 import 'package:inject/inject.dart';
@@ -9,9 +10,9 @@ class Repository {
   @provide
   Repository(this.networkProvider);
 
-  Future<MoviesPopular> fetchMoviesPopularList() =>
+  Future<State> fetchMoviesPopularList() =>
       networkProvider.fetchMoviesPopularList();
 
-  Future<Trailer> fetchTrailers(int movieId) =>
+  Future<State> fetchTrailers(int movieId) =>
       networkProvider.fetchTrailers(movieId);
 }
